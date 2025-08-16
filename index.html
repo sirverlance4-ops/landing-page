@@ -96,11 +96,18 @@
             const modalLoadingSpinner = document.getElementById('modal-loading-spinner');
             const closeModalBtn = document.getElementById('close-modal');
 
+            // Fungsi helper untuk mendapatkan URL gambar langsung dari ID file Google Drive
+            // Mengubah 'export=view' menjadi 'export=download' untuk mendapatkan kualitas gambar terbaik.
+            const getDirectImageLink = (fileId) => {
+                return `https://drive.google.com/uc?export=download&id=${fileId}`;
+            };
+
             // Data simulasi untuk folder galeri
             const galleryFoldersData = {
                 'folder-1': {
                     title: 'Folder Acara Kantor',
-                    cover: 'https://drive.google.com/file/d/1IKwzcVO1Uc4tU6hsviWL2QidjqryU_Wj/view?usp=drive_link',
+                    // Gunakan ID file dari salah satu gambar di folder Anda
+                    cover: getDirectImageLink('1vqFwPO1PKInjpdQaJkeZ2B_o58QP7WBr'),
                 },
                 'folder-2': {
                     title: 'Folder Perjalanan Liburan',
@@ -123,9 +130,10 @@
                         switch (folderId) {
                             case 'folder-1':
                                 photos = [
-                                    { url: 'https://drive.google.com/drive/folders/1HRMXKOQZA2PbnP3huOms8iyGrXYpuddL?usp=drive_link', alt: 'Foto Kantor 1' },
-                                    // { url: 'https://placehold.co/600x400/5C7AEA/FFFFFF?text=Kantor+2', alt: 'Foto Kantor 2' },
-                                    // { url: 'https://placehold.co/600x400/5C7AEA/FFFFFF?text=Kantor+3', alt: 'Foto Kantor 3' },
+                                    // Ganti URL ini dengan URL gambar publik Anda yang sudah diperbaiki
+                                    { url: getDirectImageLink('1vqFwPO1PKInjpdQaJkeZ2B_o58QP7WBr'), alt: 'Foto Kantor 1' },
+                                    { url: getDirectImageLink('1-ID_FILE_ANDA_DISINI-'), alt: 'Foto Kantor 2' },
+                                    { url: getDirectImageLink('1-ID_FILE_ANDA_DISINI-'), alt: 'Foto Kantor 3' },
                                 ];
                                 break;
                             case 'folder-2':
