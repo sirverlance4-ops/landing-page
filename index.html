@@ -7,26 +7,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page dengan Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        /* Anda bisa menambahkan CSS kustom di sini jika diperlukan */
+        /* Contoh: */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
 
-    <header>
-        <h1>Selamat Datang di Landing Page Kami!</h1>
-        <p>Ini adalah halaman web sederhana yang dibuat dari repositori GitHub.</p>
+    <header class="bg-white shadow-sm py-4">
+        <nav class="container mx-auto flex justify-between items-center px-6">
+            <a href="#" class="text-xl font-bold text-blue-600">LogoKu</a>
+            <div>
+                <a href="#fitur" class="text-gray-600 hover:text-blue-600 px-4">Fitur</a>
+                <a href="#tentang" class="text-gray-600 hover:text-blue-600 px-4">Tentang</a>
+                <a href="#kontak" class="text-gray-600 hover:text-blue-600 px-4">Kontak</a>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <section class="fitur">
-            <h2>Fitur Utama</h2>
-            <ul>
-                <li>Mudah diakses dan responsif.</li>
-                <li>Desain minimalis dan bersih.</li>
-                <li>Gratis untuk di-hosting.</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Halaman ini dibuat dengan GitHub Pages.</p>
-    </footer>
-
+    <section class="bg-blue-600 text-white text-center py-20">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+                Bangun Situs Web Impian Anda
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">
+                Solusi mudah dan cepat untuk membuat halaman modern dan responsif.
+            </p>
+            <a href="#" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+                Mulai Sekarang!
+            </a>
+        </div>
+    </section>
+                                                                                                                                                    
 </body>
 </html>
